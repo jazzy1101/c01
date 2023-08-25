@@ -6,20 +6,25 @@
 /*   By: darambae <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 21:25:18 by darambae          #+#    #+#             */
-/*   Updated: 2023/08/24 21:38:35 by darambae         ###   ########.fr       */
+/*   Updated: 2023/08/25 07:24:46 by darambae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int emp_arr[size];
+	int	temp;
 	int	i;
-	i = size - 1;
-	while (i >= 0)
+	int	len;
+
+	i = 0;
+	len = size -1 -i;
+	while (i <= len)
 	{
-		emp_arr[i - size -1] = *tab[i];
-		i--;
+		temp = tab[i];
+		tab[i] = *tab[len];
+		*tab[len] = temp;
+		i++;
 	}
 }
 
